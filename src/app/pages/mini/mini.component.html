@@ -1,1 +1,15 @@
-<p>mini works!</p>
+<h1>Mini Near Earth Objects</h1>
+<p>Estimated diameter less than 0.25 miles</p>
+<p>(save will fail for these, demonstrates optimistic updates)</p>
+
+<app-error
+  *ngIf="data.errors$ | async as err"
+  [msg]="err"
+  @toast></app-error>
+
+<app-loading *ngIf="data.loading"></app-loading>
+
+<app-grid *ngIf="miniNeo$ | async as neos">
+  <app-neo *ngFor="let neo of neos; trackBy: utils.trackByID"
+    @list [neo]="neo"></app-neo>
+</app-grid>

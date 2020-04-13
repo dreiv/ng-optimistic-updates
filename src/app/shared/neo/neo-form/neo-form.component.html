@@ -1,21 +1,20 @@
 <form
   #formNickname="ngForm"
   (ngSubmit)="onSubmit(neoForm)"
-  class="form-inline">
-  <div class="form-group">
-    <input
-      id="nickname-{{ neo.id }}"
-      name="nickname"
-      type="text"
-      [(ngModel)]="neoForm.nickname"
-      class="input-nickname form-control mr-sm-2 mb-2"
-      placeholder="nickname"
-      maxlength="100"
-      minlength="1"
-      required>
-    <button
-      type="submit"
-      class="btn btn-nickname mb-2"
-      [disabled]="!neoForm.nickname && !unsavedNickname">Save</button>
-  </div>
+  class="form">
+  <input
+    id="nickname-{{ neo.id }}"
+    name="nickname"
+    type="text"
+    [(ngModel)]="neoForm.nickname"
+    class="input-nickname"
+    placeholder="nickname"
+    maxlength="100"
+    minlength="1"
+    required>
+
+  <button
+    type="submit"
+    class="btn-nickname"
+    [disabled]="!neoForm.nickname && !unsavedNickname">💾Save</button>
 </form>

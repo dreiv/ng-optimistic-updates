@@ -1,8 +1,8 @@
 <h4 class="card-title">{{ neo.name }}</h4>
 
-<h6 *ngIf="neo.nickname" class="card-nickname">
+<h5 *ngIf="neo.nickname" class="card-nickname">
   "{{ neo.nickname }}"
-</h6>
+</h5>
 
 <app-neo-form
   *ngIf="!neo.nickname || pendingNickname"
@@ -21,9 +21,6 @@
   <dd>{{ neo.missDistance | number:'0.0-0' }} miles</dd>
 </dl>
 
-<div
-  class="alert"
-  [class.alert-danger]= "neo.isPotentiallyHazardousAsteroid"
->
+<div [class.alert-danger]= "neo.isPotentiallyHazardousAsteroid">
   {{ getHazardText(neo.isPotentiallyHazardousAsteroid) }}
 </div>

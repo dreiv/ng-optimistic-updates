@@ -9,11 +9,7 @@
 
 <app-loading *ngIf="data.loading"></app-loading>
 
-<div *ngIf="biggerFasterNeo$ | async as neos">
-  <div
-    *ngFor="let neo of neos; trackBy: utils.trackByID"
-    class="col-sm-12 col-md-6 col-lg-4"
-    @list>
-    <app-neo [neo]="neo"></app-neo>
-  </div>
-</div>
+<app-grid *ngIf="biggerFasterNeo$ | async as neos">
+  <app-neo *ngFor="let neo of neos; trackBy: utils.trackByID"
+    @list [neo]="neo"></app-neo>
+</app-grid>

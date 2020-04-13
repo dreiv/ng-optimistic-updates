@@ -12,8 +12,6 @@ export class NeoFormComponent implements OnInit {
   @Output() submitNickname = new EventEmitter<Neo>();
   neoForm: Neo;
 
-  constructor() {}
-
   ngOnInit(): void {
     this.setForm();
   }

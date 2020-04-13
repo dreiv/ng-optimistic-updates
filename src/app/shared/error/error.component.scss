@@ -1,39 +1,26 @@
 :host {
   position: fixed;
-  bottom: 40px;
-  left: 40px;
+  bottom: 2rem;
+  left: 2rem;
   z-index: 1;
+  background-color: #24292e;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 2rem 0.5rem rgba(0, 0, 0, 0.8);
 }
 
-.alert {
-  box-shadow: 0 0 30px 7px rgba(0, 0, 0, 0.8);
-  margin-bottom: 0;
-  padding: 0;
-}
-
-.toast-error-header {
+.alert-header {
   border-bottom: 1px solid #960000;
-  color: #fff;
   line-height: 1.5rem;
-  overflow: hidden;
   padding: 0.5rem 0.75rem;
 }
 
-.toast-error-body {
-  background: rgba(0, 0, 0, 0.3);
+.alert-body {
   font-size: 0.85rem;
   padding: 0.85rem 0.75rem;
 }
 
-a {
-  color: rgba(255, 255, 255, 0.8);
-  cursor: pointer;
+.alert-dismiss {
   font-size: 1.5rem;
-  transition: color 300ms ease;
-}
-
-a:hover {
-  color: #fff;
-  text-decoration: none;
-  transition: color 300ms ease;
+  margin-left: 0.5rem;
+  vertical-align: super;
 }

@@ -8,9 +8,8 @@ describe('BiggerFasterComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BiggerFasterComponent ]
-    })
-    .compileComponents();
+      declarations: [BiggerFasterComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
