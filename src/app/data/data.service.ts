@@ -54,7 +54,7 @@ export class DataService extends State {
       // Return the observable that "interacts with the server"
       return timer(2500).pipe(
         map(() => {
-          if (neo.estimatedDiameter <= 0.5) {
+          if (neo.estimatedDiameter <= 0.2) {
             throw new Error(`Could not update ${neo.name}.`);
           }
           return neo;
