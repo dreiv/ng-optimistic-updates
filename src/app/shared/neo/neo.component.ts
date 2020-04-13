@@ -17,7 +17,7 @@ export class NeoComponent {
     return !hazardous ? 'No extinction-level event' : 'Potentially hazardous!';
   }
 
-  onSubmitNicknameInput(event: Neo): void {
+  onSubmitNickname(event: Neo): void {
     this.pendingNickname = '';
     this.data.update$(event).subscribe(
       (neo) => {

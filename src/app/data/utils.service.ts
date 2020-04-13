@@ -53,7 +53,7 @@ export class UtilsService {
 
   // Take API data and produce an array of simplified NEOs
   mapNEOResponse(neoData: NeoApi): Neo[] {
-    const neoList = neoData.nearEarthObjects[this.getNEODate];
+    const neoList = neoData.near_earth_objects[this.getNEODate];
     return neoList.map((neo) => this.mapNEObj(neo));
   }
 

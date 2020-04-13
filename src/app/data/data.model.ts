@@ -1,7 +1,7 @@
 interface NeoApi {
   links?: { [key: string]: any };
   elementCount?: number;
-  nearEarthObjects?: { [key: string]: any };
+  near_earth_objects?: { [key: string]: any };
 }
 
 interface Neo {
