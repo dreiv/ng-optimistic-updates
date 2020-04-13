@@ -9,6 +9,9 @@
 <app-loading *ngIf="data.loading"></app-loading>
 
 <app-grid *ngIf="data.neoStore$ | async as neos">
-  <app-neo *ngFor="let neo of neos; trackBy: utils.trackByID"
-    @list [neo]="neo"></app-neo>
+  <app-neo
+    *ngFor="let neo of neos; trackBy: utils.trackByID"
+    [neo]="neo"
+    @list>
+  </app-neo>
 </app-grid>

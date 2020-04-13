@@ -1,3 +1,11 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  padding: 6rem 1rem 1rem 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
 .loader {
   border: 1rem solid transparent;
   border-top: 1rem solid currentColor;

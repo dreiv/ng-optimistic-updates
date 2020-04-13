@@ -8,9 +8,8 @@ describe('NeoFormComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NeoFormComponent ]
-    })
-    .compileComponents();
+      declarations: [NeoFormComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
