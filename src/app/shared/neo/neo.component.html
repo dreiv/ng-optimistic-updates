@@ -21,6 +21,9 @@
   <dd>{{ neo.missDistance | number:'0.0-0' }} miles</dd>
 </dl>
 
-<div [class.alert-danger]= "neo.isPotentiallyHazardousAsteroid">
+<div
+  class="alert"
+  [class.alert-danger]= "neo.isPotentiallyHazardousAsteroid"
+>
   {{ getHazardText(neo.isPotentiallyHazardousAsteroid) }}
 </div>
