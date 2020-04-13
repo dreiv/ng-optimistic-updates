@@ -4,7 +4,7 @@ import { Router, NavigationEnd } from '@angular/router';
 import { environment } from './../../environments/environment';
 
 import { Observable, throwError, timer, defer } from 'rxjs';
-import { map, tap, catchError, delay } from 'rxjs/operators';
+import { map, tap, catchError } from 'rxjs/operators';
 
 import { Neo, NeoApi } from './data.model';
 
@@ -34,7 +34,6 @@ export class DataService extends State {
 
   neoData$(): Observable<Neo[]> {
     return this.http.get<NeoApi>(this.apNeoUrl).pipe(
-      delay(1500), // Simulate longer server delay since the NASA API is QUICK
       map((res) => this.utils.mapNEOResponse(res)),
       tap((neoList) => {
         this.setNeoStore(neoList);

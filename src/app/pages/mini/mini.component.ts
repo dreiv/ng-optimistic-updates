@@ -14,13 +14,7 @@ import { list } from 'src/app/shared/animations/list.animation';
 export class MiniComponent {
   miniNeo$ = this.data.neoStore$.pipe(
     filter((neoList) => !!neoList === true),
-    map((neoList) =>
-      neoList.filter((neo) => {
-        if (neo.estimatedDiameter < 0.25) {
-          return neo;
-        }
-      })
-    )
+    map((neoList) => neoList.filter((neo) => neo.estimatedDiameter < 0.25))
   );
 
   constructor(public data: DataService, public utils: UtilsService) {}

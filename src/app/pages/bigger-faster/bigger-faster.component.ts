@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/data/data.service';
 import { UtilsService } from 'src/app/data/utils.service';
-import { filter, map } from 'rxjs/operators';
+import { map, filter } from 'rxjs/operators';
 import { toast } from 'src/app/shared/animations/toast.animation';
 import { list } from 'src/app/shared/animations/list.animation';
 
@@ -17,11 +17,9 @@ export class BiggerFasterComponent implements OnInit {
   biggerFasterNeo$ = this.data.neoStore$.pipe(
     filter((neoList) => !!neoList === true),
     map((neoList) =>
-      neoList.filter((neo) => {
-        if (neo.estimatedDiameter > 0.5 || neo.relativeVelocity > 50000) {
-          return neo;
-        }
-      })
+      neoList.filter(
+        (neo) => neo.estimatedDiameter > 0.5 || neo.relativeVelocity > 50000
+      )
     )
   );
 

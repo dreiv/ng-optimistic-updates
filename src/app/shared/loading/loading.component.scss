@@ -4,6 +4,9 @@
   padding: 6rem 1rem 1rem 1rem;
   justify-content: center;
   align-items: center;
+
+  will-change: opacity;
+  animation: delayedFadeIn 0.5s;
 }
 
 .loader {
@@ -12,6 +15,8 @@
   border-radius: 50%;
   width: 7.5rem;
   height: 7.5rem;
+
+  will-change: rotate;
   animation: spin 2s linear infinite;
 }
 
@@ -21,5 +26,17 @@
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes delayedFadeIn {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
