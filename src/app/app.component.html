@@ -1,1 +1,22 @@
-<h1>hello world!</h1>
+<header>
+  <nav>
+    <a
+      routerLink="/"
+      class="nav-link"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      Home
+    </a>
+    <a routerLink="/bigger-faster" class="nav-link" routerLinkActive="active">
+      Bigger, Faster NEO
+    </a>
+    <a routerLink="/mini" class="nav-link" routerLinkActive="active">
+      Mini NEO
+    </a>
+  </nav>
+</header>
+
+<main>
+  <router-outlet></router-outlet>
+</main>
