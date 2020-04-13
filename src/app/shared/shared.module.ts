@@ -6,15 +6,17 @@ import { ErrorComponent } from './error/error.component';
 import { LoadingComponent } from './loading/loading.component';
 import { NeoComponent } from './neo/neo.component';
 import { NeoFormComponent } from './neo/neo-form/neo-form.component';
+import { GridComponent } from './grid/grid.component';
 
 @NgModule({
   declarations: [
     ErrorComponent,
     LoadingComponent,
     NeoComponent,
-    NeoFormComponent
+    NeoFormComponent,
+    GridComponent
   ],
   imports: [CommonModule, FormsModule],
-  exports: [ErrorComponent, LoadingComponent, NeoComponent]
+  exports: [ErrorComponent, LoadingComponent, NeoComponent, GridComponent]
 })
 export class SharedModule {}
