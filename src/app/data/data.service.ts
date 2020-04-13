@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router, NavigationEnd } from '@angular/router';
+import { environment } from './../../environments/environment';
 
 import { Observable, throwError, timer, defer } from 'rxjs';
 import { map, tap, catchError, delay } from 'rxjs/operators';
