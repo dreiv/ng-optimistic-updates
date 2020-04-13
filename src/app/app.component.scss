@@ -1,0 +1,26 @@
+:host {
+  display: block;
+  width: 100%;
+  max-width: 60rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+nav {
+  text-align: end;
+}
+
+.nav-link {
+  color: inherit;
+  font-size: 1.25rem;
+  text-decoration: none;
+
+  &.active,
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:not(:last-child) {
+    margin-right: 1ch;
+  }
+}
